@@ -3,10 +3,10 @@ let scene;
 
 function init(){
   const scene = new THREE.Scene();
-  var loader = new THREE.TextureLoader();
+  let loader = new THREE.TextureLoader();
 
-  loader.load("../img/pipi3.png", function(texture){
-    scene.background = texture;
+  loader.load("./img/fondobendeck.jpg", function(texture){
+    scene.background = texture
   });
 
 
@@ -26,7 +26,7 @@ function init(){
   //3D
 
   const loader2 = new THREE.GLTFLoader();
-  loader2.load("../3D1/mano/scene2.gltf", function(gltf){
+  loader2.load("./3D1/mano/scene2.gltf", function(gltf){
     car = gltf.scene.children[0];
     car.scale.set(0.12, 0.12, 0.12);
     scene.add(gltf.scene);
@@ -36,7 +36,7 @@ function init(){
   })
 
   const loader3 = new THREE.GLTFLoader();
-  loader3.load("../3D1/soldado/soldado.gltf", function(gltf){
+  loader3.load("./3D1/soldado/soldado.gltf", function(gltf){
     car2 = gltf.scene.children[0];
     car2.scale.set(13, 13, 13);
     scene.add(gltf.scene);
@@ -47,7 +47,7 @@ function init(){
   }) 
 
   const loader4 = new THREE.GLTFLoader();
-  loader4.load("../3D1/Zorro/Pan.gltf", function(gltf){
+  loader4.load("./3D1/Zorro/Pan.gltf", function(gltf){
     car3 = gltf.scene.children[0];
     car3.scale.set(13, 13, 13);
     scene.add(gltf.scene);
